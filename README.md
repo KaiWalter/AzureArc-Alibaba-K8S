@@ -16,10 +16,14 @@ Connect a __Alibaba Cloud__ Kubernetes cluster to __Azure Arc___ and deploy work
 set environment variables (e.g. in `.profile`) :
 
 ```bash
-export ALICLOUD_ACCESS_KEY="----access-key----"
+export ALICLOUD_ACCESS_KEY="----Alibaba Cloud access-key----"
 export ALICLOUD_SECRET_KEY="----secret-key----"
-export ALICLOUD_REGION="----region----"  # e.g. cn-shanghai
+export ALICLOUD_REGION="----region----" # e.g. cn-shanghai
 export ALICLOUD_PROFILE="akProfile"
+
+export AZURE_SUBSCRIPTION_ID="----Azure subscription id----"
+export AZURE_LOCATION="----location---" # e.g. southeastasia
+export AZURE_RESOURCE_GROUP="---resource group----"
 ```
 
 ### deploy jump VM and cluster
@@ -30,11 +34,11 @@ terraform init
 terraform apply
 ```
 
-### copy `kubeconfig` to jump VM
+### setup jump VM
 
 ```bash
 cd ..
-./set_kubeconfig.sh
+./setup_ay_jump.sh
 ```
 
 ### check VM installation status
