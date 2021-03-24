@@ -48,3 +48,9 @@ cd ..
 
 tail /var/log/cloud-init-output.log
 ```
+
+### deploy sample application
+
+```bash
+./deploy_demo.sh
+```
